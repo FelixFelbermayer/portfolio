@@ -102,7 +102,7 @@
 }
 
 .mobileNav {
-  position: fixed;
+  position: absolute;
   top: 70px;
   left: 0;
   width: 100%;
@@ -110,7 +110,7 @@
   background-color: var(--background);
   overflow: hidden;
   transition: height 0.3s ease;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mobileNav.open {
