@@ -36,7 +36,7 @@ export default function Header() {
         <div className={styles.logo}>
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/Logo.png"
               alt="Felbermayer Logo"
               width={250}
               height={250}
