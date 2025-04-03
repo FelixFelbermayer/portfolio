@@ -177,3 +177,10 @@ html[data-theme="dark"] .themeToggle:hover {
     display: none;
   }
 }
+
+.logoImage {
+  width: auto;
+  height: auto;
+  max-height: 50px;
+  object-fit: contain;
+}

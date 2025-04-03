@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Header.module.css";
 import { useTheme } from "../../context/ThemeContext";
 
@@ -33,7 +34,16 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/">Felbermayer</Link>
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="Felbermayer Logo"
+              width={250}
+              height={250}
+              quality={100}
+              className={styles.logoImage}
+            />
+          </Link>
         </div>
 
         {isMobile ? (
