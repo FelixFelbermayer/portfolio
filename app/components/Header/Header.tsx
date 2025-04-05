@@ -50,15 +50,6 @@ export default function Header() {
           <>
             <div className={styles.mobileButtons}>
               <button
-                className={styles.themeToggle}
-                onClick={toggleTheme}
-                aria-label={`Switch to ${
-                  theme === "light" ? "dark" : "light"
-                } mode`}
-              >
-                {theme === "light" ? "🌙" : "☀️"}
-              </button>
-              <button
                 className={`${styles.burgerMenu} ${
                   isMenuOpen ? styles.open : ""
                 }`}
@@ -90,6 +81,15 @@ export default function Header() {
                     Resume
                   </Link>
                 </li>
+                <button
+                  className={styles.themeToggle}
+                  onClick={toggleTheme}
+                  aria-label={`Switch to ${
+                    theme === "light" ? "dark" : "light"
+                  } mode`}
+                >
+                  {theme === "light" ? "🌙" : "☀️"}
+                </button>
               </ul>
             </nav>
           </>
