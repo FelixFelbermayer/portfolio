@@ -1,11 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import { useTheme } from "../../context/ThemeContext";
 import styles from "./HeroSection.module.css";
 
 export default function HeroSection() {
+  const { theme } = useTheme();
+
   return (
-    <section className={styles.heroSection}>
+    <section
+      className={`${styles.heroSection} ${
+        theme === "dark" ? styles.darkMode : ""
+      }`}
+    >
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={styles.heading}>
