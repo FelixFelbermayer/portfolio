@@ -11,6 +11,9 @@ export default function Projects() {
   const seeAllRef = useRef<HTMLAnchorElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
 
+  // Get only the first 6 projects
+  const displayedProjects = projects.slice(0, 6);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -57,7 +60,7 @@ export default function Projects() {
         My Projects
       </h2>
       <div className={styles.grid}>
-        {projects.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <div
             key={project.id}
             ref={(el) => {

@@ -48,4 +48,11 @@ export const projects: Project[] = [
       "A brief description of the sixth project and its key features.",
     imageUrl: "/Hero.png",
   },
+  {
+    id: 7,
+    title: "Project Six",
+    description:
+      "A brief description of the sixth project and its key features.",
+    imageUrl: "/Hero.png",
+  },
 ];
