@@ -1,0 +1,175 @@
+.projects {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  position: relative;
+  text-align: left;
+}
+
+.heading::before {
+  content: "Projects";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  transform: none;
+  -webkit-text-fill-color: var(--bg-primary);
+  color: var(--bg-primary);
+  font-family: var(--font-londrina-outline), serif;
+  font-size: 7rem;
+  font-weight: 400;
+  z-index: -1;
+  white-space: nowrap;
+  -webkit-text-stroke: 2px var(--text-primary);
+  text-stroke: 2px var(--text-primary);
+  letter-spacing: 2px;
+  opacity: 0.2;
+}
+
+.heading.visible {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: linear-gradient(145deg, var(--card-bg), var(--card-bg-darker));
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.card.visible {
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Add delay for each card */
+.card.visible:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card.visible:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card.visible:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.card.visible:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.card.visible:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.card.visible:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.1);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem;
+  color: var(--text-primary);
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 1rem 1rem;
+  line-height: 1.5;
+}
+
+.seeAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.seeAll.visible {
+  animation: slideIn 0.5s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.seeAll:hover {
+  color: var(--accent-color);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.seeAll:hover .arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    padding: 2rem 1rem;
+  }
+}

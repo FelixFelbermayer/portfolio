@@ -15,6 +15,7 @@
   flex: 1;
   display: flex;
   opacity: 0;
+  padding: 4rem 2rem;
   transform: translateX(-50px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }

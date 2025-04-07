@@ -1,34 +1,37 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
+import { Londrina_Outline } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import { ThemeProvider } from "./context/ThemeContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const geist = Geist({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-geist",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const londrinaOutline = Londrina_Outline({
+  weight: "400",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-londrina-outline",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Felbermayer | Portfolio",
   description: "Personal portfolio showcasing projects and skills",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${geist.variable} ${londrinaOutline.variable}`}>
+      <body className={geist.className}>
         <ThemeProvider>
           <Header />
           {children}
