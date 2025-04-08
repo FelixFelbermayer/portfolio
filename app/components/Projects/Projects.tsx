@@ -68,7 +68,7 @@ export default function Projects() {
             }}
             className={styles.card}
           >
-            <Link href={`/projects/${project.id}`} className={styles.cardLink}>
+            <Link href={`/project/${project.id}`} className={styles.cardLink}>
               <div className={styles.imageContainer}>
                 <Image
                   src={project.imageUrl}
