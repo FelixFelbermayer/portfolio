@@ -68,17 +68,19 @@ export default function Projects() {
             }}
             className={styles.card}
           >
-            <div className={styles.imageContainer}>
-              <Image
-                src={project.imageUrl}
-                alt={project.title}
-                fill
-                className={styles.image}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-            <h3 className={styles.title}>{project.title}</h3>
-            <p className={styles.description}>{project.description}</p>
+            <Link href={`/projects/${project.id}`} className={styles.cardLink}>
+              <div className={styles.imageContainer}>
+                <Image
+                  src={project.imageUrl}
+                  alt={project.title}
+                  fill
+                  className={styles.image}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <h3 className={styles.title}>{project.title}</h3>
+              <p className={styles.description}>{project.description}</p>
+            </Link>
           </div>
         ))}
       </div>
