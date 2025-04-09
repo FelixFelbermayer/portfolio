@@ -7,6 +7,7 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
 }
 
 .heroSection::before {
@@ -68,6 +69,7 @@
   object-fit: contain;
   transition: transform 0.5s ease;
   animation: slideIn 1.2s ease-out forwards;
+  margin-bottom: -10px;
 }
 
 .typingContainer {

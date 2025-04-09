@@ -3,10 +3,24 @@
 import Image from "next/image";
 import { useTheme } from "../../context/ThemeContext";
 import styles from "./HeroSection.module.css";
-
+import React, { useState, useEffect } from "react";
 export default function HeroSection() {
   const { theme } = useTheme();
 
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      const newScale = 1 + scrollY / 1000;
+      setScale(Math.min(newScale, 1.2));
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <section
       className={`${styles.heroSection} ${
@@ -37,14 +51,21 @@ export default function HeroSection() {
           </h1>
         </div>
         <div className={styles.imageContainer}>
-          <Image
-            src="/Hero.png"
-            alt="Felix Felbermayer"
-            width={500}
-            height={500}
-            className={styles.heroImage}
-            priority
-          />
+          <div
+            style={{
+              transition: "transform 0.1s ease-out",
+              transform: `scale(${scale})`,
+            }}
+          >
+            <Image
+              src="/Hero.png"
+              alt="Felix Felbermayer"
+              width={500}
+              height={500}
+              className={styles.heroImage}
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
