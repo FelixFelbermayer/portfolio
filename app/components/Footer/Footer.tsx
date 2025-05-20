@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -128,11 +127,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={styles.imprint}>
+      {/* <div className={styles.imprint}>
         <Link href="/imprint" className={styles.imprintLink}>
           Imprint
         </Link>
-      </div>
+      </div> */}
     </footer>
   );
 }

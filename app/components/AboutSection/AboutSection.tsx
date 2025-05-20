@@ -51,7 +51,7 @@ export default function AboutSection() {
           }`}
         >
           <Image
-            src="/Story.png"
+            src="/Story.JPG"
             alt="Felix Felbermayer"
             width={400}
             height={400}
@@ -84,8 +84,9 @@ export default function AboutSection() {
             <p>
               I primarily work with React and Next.js for frontend development,
               crafting intuitive user interfaces with clean, maintainable code.
-              On the backend, I&apos;m proficient with NestJS and other Node.js
-              frameworks, ensuring robust and scalable server-side solutions.
+              On the backend, I&apos;m proficient with Node.js frameworks, using
+              Mysql, Postgres together with Prisma ensuring robust and scalable
+              server-side solutions.
             </p>
             <p>
               My approach combines technical excellence with a focus on
