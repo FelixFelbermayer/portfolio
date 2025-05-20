@@ -51,7 +51,7 @@ export default function AboutSection() {
           }`}
         >
           <Image
-            src="/StoryImage.png"
+            src="/Story.png"
             alt="Felix Felbermayer"
             width={400}
             height={400}
