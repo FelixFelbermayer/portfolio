@@ -67,12 +67,12 @@ export default function Header() {
             >
               <ul>
                 <li>
-                  <Link href="/projects" onClick={toggleMenu}>
+                  <Link href="#projects" onClick={toggleMenu}>
                     Projects
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" onClick={toggleMenu}>
+                  <Link href="#contact" onClick={toggleMenu}>
                     Contact
                   </Link>
                 </li>
