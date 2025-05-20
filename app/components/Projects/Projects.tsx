@@ -55,7 +55,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} id="projects">
       <h2 ref={headingRef} className={styles.heading}>
         My Projects
       </h2>
@@ -84,7 +84,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <Link href="/projects" className={styles.seeAll} ref={seeAllRef}>
+      {/* <Link href="/projects" className={styles.seeAll} ref={seeAllRef}>
         See all projects
         <svg
           className={styles.arrow}
@@ -102,7 +102,7 @@ export default function Projects() {
             strokeLinejoin="round"
           />
         </svg>
-      </Link>
+      </Link> */}
     </section>
   );
 }

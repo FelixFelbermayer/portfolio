@@ -76,10 +76,14 @@ export default function Header() {
                     Contact
                   </Link>
                 </li>
-                <li>
-                  <Link href="/resume" onClick={toggleMenu}>
-                    Resume
-                  </Link>
+                <li onClick={toggleMenu}>
+                  <a
+                    href="Lebenslauf.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Download Resume
+                  </a>
                 </li>
                 <button
                   className={styles.themeToggle}
@@ -97,13 +101,19 @@ export default function Header() {
           <nav className={styles.desktopNav}>
             <ul>
               <li>
-                <Link href="/projects">Projects</Link>
+                <Link href="#projects">Projects</Link>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <Link href="#contact">Contact</Link>
               </li>
               <li>
-                <Link href="/resume">Resume</Link>
+                <a
+                  href="Lebenslauf.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download Resume
+                </a>
               </li>
               <li>
                 <button
