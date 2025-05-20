@@ -13,8 +13,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Redsign ÖH-Website",
-    description: "A redesign of the old Homepage of the students union.",
+    title: "Redesign ÖH-Website",
+    description: "A redesign of the Student Union's old homepage.",
     imageUrl: "/ÖH.png",
     technologies: ["Next.js", "Docker", "WP-Graphql", "React"],
     links: { demo: "https://www.oeh-fh-salzburg.at/" },
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     id: "2",
     title: "Pixed.cloud",
-    description: "An easy to use photo sharing plattform.",
+    description: "An easy-to-use photo sharing platform.",
     imageUrl: "/Pixed.png",
     technologies: [
       "React.js",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     id: "3",
     title: "Vibanise",
     description:
-      "A organising dashboard to keep track of daily tasks and your goals.",
+      "An organizational dashboard to manage your daily tasks and track your goals.",
     imageUrl: "/vibanise.png",
     technologies: ["Next.js", "Coolify", "MySQL", "Prisma", "Better Auth"],
     links: { demo: "https://vibanise.felbermayer.dev" },
